@@ -1,0 +1,31 @@
+# Aws Serverless ECS Fargate CiCd
+
+1. ACM ---> *.cloudgeeks.ca
+
+2. Terraform VPC+LoadBalancer Setup ----> pull code from --- git clone https://github.com/quickbooks2018/Terraform-V-12.git
+
+3. AWS CodePipeline ---> AWS--->CodeCommit--->Setup
+
+4. AWS ECR ---> Setup
+
+5. AWS CodePipleline ---> AWS--->CodeBuild--->Eg--->docker build -t nodeapp
+
+6. AWS CodePipeline ---> AWS--->CodePipeline--->Eg--->Setup--->Skip-Deploy-Stage--->Create--->AWS--->CodePipeline
+
+7. Create a Service Role for Code-Deploy ---> Codedeploy--->select---> codedeploy-ecs ---> ATTACH ---> 2 more policies ---> 1.ElasticLoadBalancingFullAccess 2.AmazonECS_FullAccess
+
+8.  ECS ---> Create---> Cluster
+
+9.  ECS ---> TaskDefinition
+
+10. ECS ---> Create Service ---> for ---> ALB---> Create new TG---> select defaults ---> Important ---> ALB---> SG---> Must open CONTAINER Port exposed---> 8080
+
+11. BlueGreen SetUp ---> make a new commit ---> aws codepiple will trigger ----> now apply the changes ---> ECS---> services ---> update---> simply ----> force new deployment
+
+12. For deployment ---> changes 5/10 min ---> further ---> services ---> desired tasks ----> termination time ---> see in CodeDeploy perspective
+
+13. CodeDeploy perspective 
+
+14. Further Check the ALB ----> view services ---> rule ---> SWITCHED ---> (change manually if not automatically done)
+
+15. Incase of Issue for NEW GREEN Version ---> if things goes simply make changes from CodeDeploy ---> Console ---> (terminate orininal task set) means---> delete the old version & keep the new version. ---> (stop deployment) ---> everything remain "AS IS" , (stop & roll back deployment) ---> keep the Original version & remove the new version, (4th choice is wait 1 hour which will delete automatically old version & keep the new version) 
