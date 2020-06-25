@@ -1,4 +1,4 @@
-# DevOps AWS Serverless Cicd CodeCommit CodeBuild CodeDeploy
+# DevOps AWS Serverless ECS(Fargate) Cicd CodeCommit CodeBuild CodeDeploy
 
 Automation by DevOps Muhammad Asim, for learning & understanding, please like, share & subscribe
 
