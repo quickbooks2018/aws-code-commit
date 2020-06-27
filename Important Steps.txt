@@ -1,6 +1,8 @@
 # Aws Serverless ECS Fargate CiCd
 
-1. ACM ---> *.cloudgeeks.ca
+### ---> 1. Your NodeJs Application which we will dockerize <--- ####
+
+1a. ACM ---> *.cloudgeeks.ca
 
 2. Terraform VPC+LoadBalancer Setup ----> pull code from --- git clone https://github.com/quickbooks2018/Terraform-V-12.git
 
