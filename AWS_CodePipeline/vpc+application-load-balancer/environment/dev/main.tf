@@ -27,7 +27,7 @@ module "alb-sg" {
   namespace           = "cloudgeeks.ca"
   stage               = "dev"
   name                = "ALB"
-  tcp_ports           = "80,443"
+  tcp_ports           = "80,8080,443"
   cidrs               = ["0.0.0.0/0"]
   security_group_name = "Application-LoadBalancer"
   vpc_id              = module.vpc.vpc-id
@@ -38,7 +38,7 @@ module "alb-ref" {
   namespace               = "cloudgeeks.ca"
   stage                   = "dev"
   name                    = "ALB-Ref"
-  tcp_ports               = "80,8080,443"
+  tcp_ports               = "80,443"
   ref_security_groups_ids = [module.alb-sg.aws_security_group_default,module.alb-sg.aws_security_group_default]
   security_group_name     = "ALB-Ref"
   vpc_id                  = module.vpc.vpc-id
