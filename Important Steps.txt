@@ -14,7 +14,7 @@
 
 6. AWS CodePipeline ---> AWS--->CodePipeline--->Eg--->Setup--->Skip-Deploy-Stage--->Create--->AWS--->CodePipeline
 
-7.Do Not Create a CodeDeploy applicationfrom ---> AWS CodePipeline ---> Create a Service Role for Code-Deploy ---> Codedeploy--->select---> codedeploy-ecs ---> ATTACH ---> 2 more policies ---> 1.ElasticLoadBalancingFullAccess 2.AmazonECS_FullAccess
+7.Do Not Create a CodeDeploy application from ---> AWS CodePipeline ---> Create a Service Role for Code-Deploy ---> Codedeploy--->select---> codedeploy-ecs ---> ATTACH ---> 2 more policies ---> 1.ElasticLoadBalancingFullAccess 2.AmazonECS_FullAccess
 
 8.  ECS ---> Create---> Cluster
 
