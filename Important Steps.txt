@@ -10,7 +10,7 @@
 
 4. AWS ECR ---> Setup
 
-5. AWS CodePipleline ---> AWS--->CodeBuild--->Eg--->docker build -t nodeapp
+5. AWS CodePipleline ---> AWS--->CodeBuild--->Eg--->docker build -t nodeapp ---> eg. codebuild-cloudgeeks-codebuild-service-role  ---> attach additonal policy with this role -->   arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser  ---> so CodeBuild can access the ECR.
 
 6. AWS CodePipeline ---> AWS--->CodePipeline--->Eg--->Setup--->Skip-Deploy-Stage--->Create--->AWS--->CodePipeline
 
